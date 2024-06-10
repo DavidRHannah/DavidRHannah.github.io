@@ -4,7 +4,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: auto;
     height: 100%;
     font-family: Arial, sans-serif;
     color: white;
@@ -19,29 +19,34 @@ body, html {
     background-color: #000;
     background-size: cover;
     background-position: 50% 50%;
-    z-index: 0; /* Ensure particles are in the background */
+    z-index: 0;
 }
 
 .content {
     position: relative;
-    z-index: 10; /* Ensure content is above particles */
+    z-index: 10; 
     text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 20px;
+    padding: 400px;
+    color: rgb(75, 174, 255);
 }
 
 h1 {
     font-size: 3em;
     margin: 0;
+    color: white
 }
 
 h1 span {
-    color: red;
+    color: rgb(75, 174, 255);
 }
 
 p {
     font-size: 1.5em;
+    color: white
+}
+
+p span {
+    color: rgb(75, 174, 255);
 }
 
 .btn {
@@ -51,21 +56,21 @@ p {
     font-size: 1.2em;
     color: white;
     background: transparent;
-    border: 2px solid red;
+    border: 2px solid rgb(75, 174, 255);
     text-decoration: none;
     transition: background 0.3s, color 0.3s;
 }
 
 .btn:hover {
-    background: red;
+    background: rgb(75, 174, 255);
     color: white;
 }
 
 #about, #projects {
     padding: 60px 20px;
     background-color: #111;
-    z-index: 10; /* Ensure about and projects section is above particles */
-    position: relative; /* Ensure positioning context */
+    z-index: 10; 
+    position: relative; 
 }
 
 #about h2, #projects h2 {
@@ -80,7 +85,7 @@ p {
     display: block;
     width: 50px;
     height: 4px;
-    background: red;
+    background: rgb(75, 174, 255);
     margin: 10px auto 0;
     border-radius: 2px;
 }
@@ -96,13 +101,20 @@ p {
     max-width: 500px;
     margin: 20px;
     text-align: center;
+    margin-bottom: 40px; 
+    padding: 20px; 
+    border: 2px solid transparent; 
+    border-radius: 10px; 
+    transition: border 0.3s; 
 }
 
 .skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
     gap: 20px;
+    justify-items: center;
+    padding-top: 40px; 
 }
 
 .skill {
@@ -125,37 +137,16 @@ p {
 }
 
 .skill:hover {
-    border-color: red;
+    border-color: rgb(75, 174, 255);
 }
 
 .project {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .project img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.project-details h3 {
-    margin-top: 10px;
-    font-size: 2em;
-}
-
-.project-details p {
-    margin: 10px 0;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 5px;
+    max-width: 40
 }
