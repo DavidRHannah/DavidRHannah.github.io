@@ -7,57 +7,59 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Hello, I'm David.</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home">
-        <h2>I'm a software developer.</h2>
-        <p>Here is some of my work.</p>
-    </section>
-    
+    <div id="particles-js"></div>
+    <div class="content">
+        <h1>Hello, I'm <span>David.</span></h1>
+        <p>I'm a software engineer.</p>
+        <a href="#about" class="btn">View my work</a>
+    </div>
+
     <section id="about">
         <h2>About</h2>
-        <p>I'm a computer science sophmore at the Uninversity of California, Riverside and I'm fully committed to learning whenever and wherever it is possible.
-            I'm currently searching for internships in the area of software engineering and quality assurance.
-        </p>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a computer science sophomore at the University of California, Riverside and I'm fully committed to learning whenever and wherever it is possible. I'm currently searching for internships in the area of software engineering and quality assurance.</p>
+            </div>
+            <div class="skills">
+                <div class="skill"><img src="./images/cplusplus-icon" alt="C++ Icon"><p>C++</p></div>
+                <div class="skill"><img src="./images/html-icon" alt="HTML Icon"><p>HTML</p></div>
+                <div class="skill"><img src="./images/css-icon" alt="CSS Icon"><p>CSS</p></div>
+                <div class="skill"><img src="./images/js-icon" alt="JavaScript Icon"><p>JavaScript</p></div>
+                <div class="skill"><img src="./images/react-icon" alt="React Icon"><p>React</p></div>
+                <div class="skill"><img src="./images/node-icon" alt="Node.js Icon"><p>Node.js</p></div>
+                <div class="skill"><img src="./images/git-icon" alt="Git Icon"><p>Git</p></div>
+            </div>
+        </div>
     </section>
-    
+
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Console Based RPG</h3>
-            <p>This is was my first collaborative project at UCR. 
-                I was exposed to a ton of technologies and software development concepts from this month long project! 
-                My team followed the <b>scrum agile</b> project management framework by meeting throughout the week and executing
-                <b>sprints</b> which aimed to knock-out an <b>epic</b> per <b>sprint</b>. Once we divied out the <b>user stories</b> for the <b>epic</b> we planned
-                to finish, we followed a <b>Test Driven Development</b> methodolgy by creating <b>unit tests</b> at the beginning of each <b>sprint</b>. 
-                This was done using the <b>google testing framework</b>. However, before any code was written, we developed our <b>KanBan</b> board for planning, <b>Navigation</b> and <b>Screen Layout 
-                Flow and Class Diagrams</b> using LucidChart as well. We also used <b>github</b> and <b>git</b> for <b>version control</b> and never committed to main! (on purpose at least).
-                We each made sure to check for memory leaks using <b>Valgrind's memcheck</b> program to ensure we maintained zero memory leaks! We also
-                used <b>gcov</b> to achieve at least <b>80% code coverage</b> as well.
-                While I'd love to share the repository to everyone, however I cannot due to potential plagiarism concerns. However, if you would like
-                to learn more about this project, <a href="#contact">contact</a> me for questions! I'd love to discuss it.
-            </p>
+            <img src="path-to-your-project-image" alt="Project Image">
+            <div class="project-details">
+                <h3>Console Based RPG</h3>
+                <p>This is was my first collaborative project at UCR. 
+                    I was exposed to a ton of technologies and software development concepts from this month long project! 
+                    My team followed the <b>scrum agile</b> project management framework by meeting throughout the week and executing
+                    <b>sprints</b> which aimed to knock-out an <b>epic</b> per <b>sprint</b>. Once we divied out the <b>user stories</b> for the <b>epic</b> we planned
+                    to finish, we followed a <b>Test Driven Development</b> methodolgy by creating <b>unit tests</b> at the beginning of each <b>sprint</b>. 
+                    This was done using the <b>google testing framework</b>. However, before any code was written, we developed our <b>KanBan</b> board for planning, <b>Navigation</b> and <b>Screen Layout 
+                    Flow and Class Diagrams</b> using LucidChart as well. We also used <b>github</b> and <b>git</b> for <b>version control</b> and never committed to main! (on purpose at least).
+                    We each made sure to check for memory leaks using <b>Valgrind's memcheck</b> program to ensure we maintained zero memory leaks! We also
+                    used <b>gcov</b> to achieve at least <b>80% code coverage</b> as well.
+                    While I'd love to share the repository to everyone, however I cannot due to potential plagiarism concerns. However, if you would like
+                    to learn more about this project, contact me for questions! I'd love to discuss it.
+                </p>
+                <a href="#contact" class="btn">Let's talk!</a>
+            </div>
         </div>
     </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:drhannah@protonmail.com">drhannah@protonmail.com</a></p>
-    </section>
-    
+
     <footer>
         <p>Follow me on:</p>
         <a target="_blank" href="https://www.linkedin.com/in/davidrhannah">LinkedIn</a> | <a target="_blank" href="https://github.com/DavidRHannah">GitHub</a>
     </footer>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="src/scripts.js"></script>
 </body>
 </html>
