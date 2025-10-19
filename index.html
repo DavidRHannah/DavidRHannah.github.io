@@ -28,14 +28,23 @@
         }
 
         :root {
-            --primary: #8ba5eb;
-            --primary-dark: #080358;
-            --secondary: #0530be;
-            --dark: #0f172a;
-            --dark-light: #1e293b;
-            --text: #dcdee0;
-            --text-dim: #94a3b8;
-            --accent: #4c9af3;
+            --primary: #027FBA;
+            --primary-dark: #ffffff;
+            --primary-hover: #ffffff;
+            --primary-border: #ffffff;
+            --secondary: #45fd80;
+            --secondary-dark: #ffffff;
+            --secondary-hover: #ffffff;
+            --secondary-border: #ffffff;
+            --dark: #ffffff;
+            --dark-light: #ffffff;
+            --text: #ffffff;
+            --text-dim: #ffffff;
+            --accent: #ffffff;
+            --nav-border: #ffffff;
+            --radiant-middle: #fd8045;
+            --radiant-outer: #ffffff;
+            --radiant-outside: #ffffff;
         }
 
         body {
@@ -57,7 +66,7 @@
             backdrop-filter: blur(15px);
             z-index: 1000;
             padding: 1rem 0;
-            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+            border-bottom: 1px solid var(--nav-border);
         }
 
         nav .container {
@@ -197,13 +206,12 @@
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(15, 16, 58, 0.3);
         }
 
         .btn-secondary {
             background: transparent;
             color: var(--text);
-            border: 2px solid var(--primary);
+            border: 2px solid var(--secondary);
         }
 
         .btn-secondary:hover {
@@ -244,7 +252,7 @@
             background: var(--dark-light);
             padding: 2rem;
             border-radius: 16px;
-            border: 1px solid rgba(99, 102, 241, 0.1);
+            border: 1px solid var(--primary-border);
         }
 
         .about-content p {
@@ -265,14 +273,14 @@
             background: var(--dark-light);
             padding: 2rem;
             border-radius: 16px;
-            border: 1px solid rgba(99, 102, 241, 0.1);
+            border: 1px solid var(--primary-border);
             transition: all 0.3s;
         }
 
         .skill-category:hover {
             transform: translateY(-5px);
             border-color: var(--primary);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+            box-shadow: 0 10px 30px var(--primary-hover);
         }
 
         .skill-category h3 {
@@ -283,7 +291,7 @@
 
         .skill-tag {
             display: inline-block;
-            background: rgba(99, 102, 241, 0.1);
+            background: var(--primary);
             color: var(--text);
             padding: 0.5rem 1rem;
             border-radius: 20px;
@@ -308,7 +316,7 @@
             background: var(--dark-light);
             border-radius: 16px;
             overflow: hidden;
-            border: 1px solid rgba(99, 102, 241, 0.1);
+            border: 1px solid var(--primary-border);
             transition: all 0.3s;
             cursor: pointer;
         }
@@ -320,7 +328,7 @@
 
         .project-header {
             padding: 2rem;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            background: linear-gradient(135deg, var(--secondary) var(--secondary-dark));
         }
 
         .project-header h3 {
@@ -368,7 +376,7 @@
             background: var(--dark-light);
             padding: 2rem;
             border-radius: 16px;
-            border: 1px solid rgba(99, 102, 241, 0.1);
+            border: 1px solid var(--primary-border);
         }
 
         .education-header {
@@ -398,7 +406,7 @@
         }
 
         .course-tag {
-            background: rgba(34, 211, 238, 0.1);
+            background: var(--secondary-dark);
             color: var(--accent);
             padding: 0.4rem 0.8rem;
             border-radius: 15px;
@@ -410,7 +418,7 @@
             background: var(--dark-light);
             padding: 2rem;
             text-align: center;
-            border-top: 1px solid rgba(99, 102, 241, 0.1);
+            border-top: 1px solid var(--primary-border);
         }
 
         footer p {
@@ -468,9 +476,11 @@
 
         #typing-text {
             white-space: nowrap;
+            color: var(--primary);
         }
         #cursor {          
             animation: blink-cursor 0.9s step-end infinite;
+            color: var(--primary);
         }
 
         @keyframes blink-cursor {
@@ -486,8 +496,8 @@
             <a href="#home" class="logo">DRH</a>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -499,15 +509,15 @@
         <svg viewBox="0 0 100 100" style="min-height: 100%;">
             <defs>
                 <radialGradient id="radialGradient1" cx="10%" cy="25%" r="75%" fx="50%" fy="50%">
-                    <stop offset="0%" stop-color="blue" />
-                    <stop offset="50%" stop-color="#004" />
-                    <stop offset="100%" stop-color="black" />
+                    <stop offset="0%" stop-color=var(--radiant-middle) />
+                    <stop offset="50%" stop-color=var(--radiant-outer) />
+                    <stop offset="100%" stop-color=var(--radiant-outside) />
                 </radialGradient>
             </defs>
-            <rect cx="0" cy="0" width="100" height="100" fill="url(#radialGradient1)" />
+            <rect cx="0" cy="0" width="75" height="75" fill="url(#radialGradient1)" />
         </svg>
 
-        <div class="glass-effect hero-content" style="width:100%; min-height:100%;">
+        <div class="glass-effect hero-content" style="width:100%; min-height:100%; z-index:10000;">
             <h1 style="display:flex; align-items: center; padding:0; margin:0;">
                 <span id="typing-text"></span><span id="cursor">|</span>
             </h1>
@@ -517,7 +527,7 @@
                 <a href="https://github.com/DavidRHannah" target="_blank"><img src="./assets/icons/github-mark/github-mark-white.svg" alt="GitHub" style="width:2rem; height:2rem;"></a>
             </div>
             <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#projects" class="btn btn-primary">View My Projects</a>
                 <a href="#contact" class="btn btn-secondary">Get In Touch</a>
             </div>
         </div>
@@ -532,13 +542,14 @@
         <h2>About Me</h2>
         <div class="about-content">
             <p>
-                I'm a passionate software developer currently pursuing my Bachelor's in Computer Science at UC Riverside, expected to graduate in Spring 2026. My journey into technology began as a curious child who loved disassembling gadgets to understand their inner workings which evolved into a career building software solutions.
+                I'm a software developer currently pursuing a Bachelor's in Computer Science at UC Riverside, expected to graduate in Spring 2026.
             </p>
             <p>
-                I specialize in full-stack development with a strong focus on test-driven development and clean architecture. My experience spans building complex applications from interactive web platforms to system-level tools, always with an emphasis on code quality and comprehensive testing. I'm particularly drawn to projects that combine technical challenge with real-world impact.
+                I enjoy full-stack development with a strong focus on test-driven development and clean architecture. 
+                My experience spans from web applications to command line tools. 
             </p>
             <p>
-                Beyond coding, I'm driven by problem-solving and continuous learning. Whether it's optimizing performance, implementing new features, or debugging complex systems, I approach each challenge with curiosity and determination. I believe in writing code that not only works but is maintainable, testable, and scalable.
+                I love working on projects that combine technical challenge with positive impact.
             </p>
         </div>
     </section>
@@ -550,17 +561,17 @@
             <div class="project-card">
                 <div class="project-header">
                     <h3>IRKeybridge</h3>
-                    <p class="project-tech">Python • PyQt • Pytest • Arduino</p>
+                    <p class="project-tech">Python  PyQt  Pytest  Arduino</p>
                 </div>
                 <div class="project-body">
-                    <p>A sophisticated Python/Arduino system that converts TV remote IR signals into customizable keyboard macros. Features real-time input mapping, JSON-based configurations, and a GUI for recording IR protocols.</p>
+                    <p>A Python/Arduino system that converts TV remote IR signals into customizable keyboard macros. Features easy input mapping, JSON-based configurations, and a GUI for mapping and customizing.</p>
                     <p><strong>Highlights:</strong></p>
-                    <p>• Serial communication handling and real-time processing</p>
-                    <p>• Shareable remote profiles with IR detection</p>
-                    <p>• 80% code coverage via comprehensive Pytest suite</p>
+                    <p> • Serial communication handling and real-time processing</p>
+                    <p> • Shareable remote profiles with IR detection</p>
+                    <p> • 80% code coverage via comprehensive Pytest suite</p>
                     <div class="project-links">
-                        <a href="#" class="project-link">View Repo →</a>
-                        <a href="#" class="project-link">Live Demo →</a>
+                        <a href="#" class="project-link">View Repo</a>
+                        <a href="#" class="project-link">Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -568,17 +579,17 @@
             <div class="project-card">
                 <div class="project-header">
                     <h3>Document Linter</h3>
-                    <p class="project-tech">Node.js • Jest • Regex • AST</p>
+                    <p class="project-tech">Node.js  Jest  Regex  AST</p>
                 </div>
                 <div class="project-body">
                     <p>A modular rule engine with configurable rulesets to enforce documentation standards across markdown files, featuring regex-based pattern matching and AST parsing for structural validation.</p>
                     <p><strong>Highlights:</strong></p>
-                    <p>• CLI tool with JSON configuration system</p>
-                    <p>• Multiple output formats for CI/CD integration</p>
-                    <p>• 80%+ code coverage with Jest testing</p>
+                    <p> • CLI tool with JSON configuration system</p>
+                    <p> • Multiple output formats for CI/CD integration</p>
+                    <p> • 80%+ code coverage with Jest testing</p>
                     <div class="project-links">
-                        <a href="#" class="project-link">View Repo →</a>
-                        <a href="#" class="project-link">Live Demo →</a>
+                        <a href="#" class="project-link">View Repo</a>
+                        <a href="#" class="project-link">Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -586,17 +597,17 @@
             <div class="project-card">
                 <div class="project-header">
                     <h3>Netflix Replica</h3>
-                    <p class="project-tech">React.js • TypeScript • Tailwind • Express.js</p>
+                    <p class="project-tech">React.js  TypeScript  Tailwind  Express.js</p>
                 </div>
                 <div class="project-body">
                     <p>A full-featured Netflix-style streaming application with authentication, protected routes, and video playback capabilities. Integrated with OMDb API for real-world movie data.</p>
                     <p><strong>Highlights:</strong></p>
-                    <p>• 85% test coverage with Vitest</p>
-                    <p>• Responsive, animated UI design</p>
-                    <p>• Secure authentication and route protection</p>
+                    <p> • 85% test coverage with Vitest</p>
+                    <p> • Responsive, animated UI design</p>
+                    <p> • Secure authentication and route protection</p>
                     <div class="project-links">
-                        <a href="#" class="project-link">View Repo →</a>
-                        <a href="#" class="project-link">Live Demo →</a>
+                        <a href="#" class="project-link">View Repo</a>
+                        <a href="#" class="project-link">Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -604,17 +615,17 @@
             <div class="project-card">
                 <div class="project-header">
                     <h3>Scrabble Engine</h3>
-                    <p class="project-tech">React.js • TypeScript • Flask • Vitest</p>
+                    <p class="project-tech">React.js  TypeScript  Flask  Vitest</p>
                 </div>
                 <div class="project-body">
                     <p>A full-stack Scrabble application featuring complex game logic including tile placement validation, scoring calculations, and an advanced word optimization algorithm.</p>
                     <p><strong>Highlights:</strong></p>
-                    <p>• AI algorithm analyzing board state for optimal plays</p>
-                    <p>• Turn-based gameplay mechanics</p>
-                    <p>• Extensive test coverage for algorithm accuracy</p>
+                    <p> • AI algorithm analyzing board state for optimal plays</p>
+                    <p> • Turn-based gameplay mechanics</p>
+                    <p> • Extensive test coverage for algorithm accuracy</p>
                     <div class="project-links">
-                        <a href="#" class="project-link">View Repo →</a>
-                        <a href="#" class="project-link">Live Demo →</a>
+                        <a href="#" class="project-link">View Repo</a>
+                        <a href="#" class="project-link">Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -779,6 +790,7 @@
             setTimeout(type, wait);
         });
 
+        /*
         window.addEventListener('scroll', () => {
             const progressBarFill = document.querySelector('.progress-bar-fill');
             const container = document.querySelector('.progress-bar-container');
@@ -799,7 +811,8 @@
             }
 
             progressBarFill.style.height = `${progress}%`;
-        });
+        }); 
+        */
             
     </script>
 </body>
