@@ -29,22 +29,24 @@
 
         :root {
             --primary: #027FBA;
-            --primary-dark: #ffffff;
-            --primary-hover: #ffffff;
-            --primary-border: #ffffff;
-            --secondary: #45fd80;
-            --secondary-dark: #ffffff;
-            --secondary-hover: #ffffff;
-            --secondary-border: #ffffff;
-            --dark: #ffffff;
-            --dark-light: #ffffff;
+            --primary-dark: #034d6f;
+            --primary-hover: #FFA500;
+            --primary-border: #000000;
+            --secondary: #FFA500;
+            --secondary-dark: #FFA500;
+            --secondary-hover: #653400;
+            --secondary-border: #000000;
+            --dark: #034d6f;
+            --dark-light: #00D4FF;
             --text: #ffffff;
-            --text-dim: #ffffff;
-            --accent: #ffffff;
+            --text-dim: rgb(54, 54, 54);
+            --text-accent: white;
+            --text-hero-subtitle: rgb(207, 207, 207);
+            --accent: black;
             --nav-border: #ffffff;
             --radiant-middle: #fd8045;
-            --radiant-outer: #ffffff;
-            --radiant-outside: #ffffff;
+            --radiant-outer: #034d6f;
+            --radiant-outside: #034d6f;
         }
 
         body {
@@ -81,7 +83,7 @@
         nav .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, var(--primary), var(--text-accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -153,7 +155,7 @@
 
         .hero .subtitle {
             font-size: 1.5rem;
-            color: var(--text-dim);
+            color: var(--text-hero-subtitle);
             margin-bottom: 2rem;
             animation: fadeInUp 0.8s ease 0.2s backwards;
         }
@@ -200,7 +202,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background-color: var(--primary);
             color: white;
         }
 
@@ -209,13 +211,13 @@
         }
 
         .btn-secondary {
-            background: transparent;
-            color: var(--text);
-            border: 2px solid var(--secondary);
+            background: var(--secondary);
+            color: var(--text-dim);
+            border: 1px solid var(--secondary-border);
         }
 
         .btn-secondary:hover {
-            background: var(--primary);
+            background: var(--secondary-dark);
             transform: translateY(-2px);
         }
 
@@ -232,7 +234,7 @@
 
         /* Section Styles */
         section {
-            padding: 6rem 2rem;
+            padding: 4rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -241,7 +243,7 @@
             font-size: 2.5rem;
             margin-bottom: 3rem;
             text-align: center;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, var(--primary), var(--text-accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -280,7 +282,6 @@
         .skill-category:hover {
             transform: translateY(-5px);
             border-color: var(--primary);
-            box-shadow: 0 10px 30px var(--primary-hover);
         }
 
         .skill-category h3 {
@@ -291,7 +292,8 @@
 
         .skill-tag {
             display: inline-block;
-            background: var(--primary);
+            background: var(--secondary);
+            border: solid 1px var(--primary-border);
             color: var(--text);
             padding: 0.5rem 1rem;
             border-radius: 20px;
@@ -301,14 +303,13 @@
         }
 
         .skill-tag:hover {
-            background: var(--primary);
             transform: scale(1.05);
         }
 
         /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
 
@@ -407,6 +408,7 @@
 
         .course-tag {
             background: var(--secondary-dark);
+            border: solid 1px var(--primary-border);
             color: var(--accent);
             padding: 0.4rem 0.8rem;
             border-radius: 15px;
@@ -415,7 +417,7 @@
 
         /* Footer */
         footer {
-            background: var(--dark-light);
+            background: var(--primary);
             padding: 2rem;
             text-align: center;
             border-top: 1px solid var(--primary-border);
@@ -454,6 +456,10 @@
             }
 
             .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -527,8 +533,8 @@
                 <a href="https://github.com/DavidRHannah" target="_blank"><img src="./assets/icons/github-mark/github-mark-white.svg" alt="GitHub" style="width:2rem; height:2rem;"></a>
             </div>
             <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View My Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
             </div>
         </div>
     </section>
@@ -704,10 +710,10 @@
                 </p>
             </div>
             <div class="contact-info" style="display: flex; flex-direction: row; justify-content: right; gap: 1rem;">
-                <a href="mailto:drhannah@protonmail.com" style="color:white; font-size: 1.1rem;">drhannah@protonmail.com</a>
-                <a href="tel:888-888-8888" style="color:white; font-size: 1.1rem;">888-888-8888</a>
-                <a href="https://linkedin.com/in/DavidRHannah" target="_blank"><img src="./assets/icons/in-logo/InBug-White.png" alt="LinkedIn" style="width:2rem; height:2rem;"></a>
-                <a href="https://github.com/DavidRHannah" target="_blank"><img src="./assets/icons/github-mark/github-mark-white.svg" alt="GitHub" style="width:2rem; height:2rem;"></a>
+                <a href="mailto:drhannah@protonmail.com" style="color:var(--text-dim); font-size: 1.1rem;">drhannah@protonmail.com</a>
+                <a href="tel:888-888-8888" style="color:var(--text-dim); font-size: 1.1rem;">888-888-8888</a>
+                <a href="https://linkedin.com/in/DavidRHannah" target="_blank"><img src="./assets/icons/in-logo/InBug-black.png" alt="LinkedIn" style="width:2rem; height:2rem;color:var(--text-dim);"></a>
+                <a href="https://github.com/DavidRHannah" target="_blank"><img src="./assets/icons/github-mark/github-mark.svg" alt="GitHub" style="width:2rem; height:2rem;color:var(--text-dim);"></a>
             </div>
         </div>
     </section>
