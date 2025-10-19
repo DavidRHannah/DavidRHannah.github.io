@@ -257,7 +257,7 @@
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 2rem;
         }
 
@@ -316,7 +316,6 @@
         .project-card:hover {
             transform: translateY(-10px);
             border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
         }
 
         .project-header {
@@ -508,7 +507,7 @@
             <rect cx="0" cy="0" width="100" height="100" fill="url(#radialGradient1)" />
         </svg>
 
-        <div class="glass-effect hero-content" style="width:100%; min-height:100%; border: 1px solid red;">
+        <div class="glass-effect hero-content" style="width:100%; min-height:100%;">
             <h1 style="display:flex; align-items: center; padding:0; margin:0;">
                 <span id="typing-text"></span><span id="cursor">|</span>
             </h1>
@@ -521,15 +520,12 @@
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn btn-secondary">Get In Touch</a>
             </div>
-            <div class="scroll-indicator">
-                <span style="font-size: 2rem;">↓</span>
-            </div>
         </div>
     </section>
     
-    <div class="progress-bar" style="width:6px;height:100%;background-color:rgb(120, 204, 148); position: fixed; top:0; left:0;">
-        <div class="progress-bar-fill" style="width:100%;height:0%;background-color: rgb(2, 58, 21)"></div>
-    </div>
+    <!-- <div class="progress-bar" style="width:6px;height:100%;background-color:rgb(120, 204, 148); position: absolute; top:800px; left:0; height:100vh; z-index: 999;">
+        <div class="progress-bar-fill" style="width:100%;height:0%;background-color: rgb(2, 58, 21); transition: height 0.2s ease-out;"></div>
+    </div> -->
 
     <!-- About Section -->
     <section id="about">
@@ -546,62 +542,7 @@
             </p>
         </div>
     </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <div>
-                    <span class="skill-tag">TypeScript</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">SQL</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Frameworks & Libraries</h3>
-                <div>
-                    <span class="skill-tag">React.js</span>
-                    <span class="skill-tag">Express.js</span>
-                    <span class="skill-tag">PyQt</span>
-                    <span class="skill-tag">Spring Boot</span>
-                    <span class="skill-tag">Tailwind</span>
-                    <span class="skill-tag">Flask</span>
-                    <span class="skill-tag">Vitest</span>
-                    <span class="skill-tag">PyTest</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Tools & Technologies</h3>
-                <div>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Vite.js</span>
-                    <span class="skill-tag">Firebase</span>
-                    <span class="skill-tag">Figma</span>
-                    <span class="skill-tag">CMake/Make</span>
-                    <span class="skill-tag">PlantUML</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Concepts & Methodologies</h3>
-                <div>
-                    <span class="skill-tag">REST APIs</span>
-                    <span class="skill-tag">OOP</span>
-                    <span class="skill-tag">TDD</span>
-                    <span class="skill-tag">Agile</span>
-                    <span class="skill-tag">Big-O</span>
-                    <span class="skill-tag">CI/CD</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Projects Section -->
     <section id="projects">
         <h2>Featured Projects</h2>
@@ -626,7 +567,7 @@
 
             <div class="project-card">
                 <div class="project-header">
-                    <h3>Technical Documentation Linter</h3>
+                    <h3>Document Linter</h3>
                     <p class="project-tech">Node.js • Jest • Regex • AST</p>
                 </div>
                 <div class="project-body">
@@ -662,7 +603,7 @@
 
             <div class="project-card">
                 <div class="project-header">
-                    <h3>Smart Scrabble Engine</h3>
+                    <h3>Scrabble Engine</h3>
                     <p class="project-tech">React.js • TypeScript • Flask • Vitest</p>
                 </div>
                 <div class="project-body">
@@ -679,6 +620,42 @@
             </div>
         </div>
     </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <div>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Frameworks & Libraries</h3>
+                <div>
+                    <span class="skill-tag">React.js</span>
+                    <span class="skill-tag">Express.js</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">Tailwind</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Technologies</h3>
+                <div>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">Figma</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Education Section -->
     <section id="education">
@@ -800,6 +777,28 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             setTimeout(type, wait);
+        });
+
+        window.addEventListener('scroll', () => {
+            const progressBarFill = document.querySelector('.progress-bar-fill');
+            const container = document.querySelector('.progress-bar-container');
+
+            // Define the starting point (e.g., a specific element's top position or a fixed scroll offset)
+            const startPoint = document.getElementById('your-start-element').offsetTop; // Example: an element
+            // const startPoint = 500; // Example: a fixed scroll offset in pixels
+
+            const totalScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const currentScrollPosition = window.scrollY;
+
+            let progress = 0;
+            if (currentScrollPosition > startPoint) {
+                // Calculate progress only after scrolling past the start point
+                const scrollAfterStart = currentScrollPosition - startPoint;
+                const remainingScrollHeight = totalScrollHeight - startPoint;
+                progress = (scrollAfterStart / remainingScrollHeight) * 100;
+            }
+
+            progressBarFill.style.height = `${progress}%`;
         });
             
     </script>
